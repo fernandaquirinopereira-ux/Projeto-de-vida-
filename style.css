@@ -1,36 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
---fundo: #1E1E1E;
+--cor-de-fundo: #1E1E1E;
 --verde: #6FFF57;
 --branco: #FFFFFF;
---roxo: #3A375E;
+--botao-ativo: #3A375E;
+--botao-inativo: rgba(50, 42, 134, 0.5);
+--texto-fundo: rgba(58, 55, 94, 0.3);
 }
 
 {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+margin 0
+padding 0
+box-sizing border-box
 }
 
 body {
-background-color: var(--fundo);
+background-color: var(--cor-de-fundo);
 color: var(--branco);
 font-family: 'Chakra Petch', sans-serif;
 }
 
 /* MENU */
 
-header {
+.cabecalho {
+width: 100%;
 background-color: #151515;
-border-bottom: 2px solid var(--roxo);
+border-bottom: 2px solid var(--botao-ativo);
 }
 
 .menu {
 max-width: 1200px;
-margin: auto;
-
 min-height: 80px;
+
+margin: 0 auto;
 padding: 15px 20px;
 
 display: flex;
@@ -40,29 +43,34 @@ justify-content: space-between;
 
 }
 
-.menu h1 {
-font-size: 24px;
+.logo {
+font-size: 25px;
 }
 
-.menu h1 span {
+.logo span {
 color: var(--verde);
 }
 
-/* BOTÕES */
+/* BOTÕES DO MENU */
 
 .botoes {
 display: flex;
+gap: 5px;
+}
+
+/* Esconde os radio buttons */
+
+.botoes input {
+display: none;
 }
 
 .botao {
-font-family: 'Chakra Petch', sans-serif;
-
-color: white;
-background-color: transparent;
-
-border: none;
+display: block;
 
 padding: 15px 20px;
+
+color: var(--branco);
+background-color: transparent;
 
 font-size: 17px;
 
@@ -74,14 +82,18 @@ transition: 0.3s;
 }
 
 .botao:hover {
-background-color: var(--roxo);
+background-color: var(--botao-inativo);
 }
 
 /* BOTÃO ATIVO */
 
-.botao.ativo {
-background-color: var(--roxo);
+#estudos:checked + .botao,
+#programacao:checked + .botao,
+#portfolio:checked + .botao,
+#carreira:checked + .botao {
 color: var(--verde);
+
+background-color: var(--botao-ativo);
 
 border-bottom: 4px solid var(--verde);
 
@@ -90,48 +102,48 @@ font-weight: 700;
 
 }
 
-/* CONTEÚDO */
+/* CONTEÚDO PRINCIPAL */
 
-main {
+.conteudo-principal {
 max-width: 1200px;
-margin: auto;
+
+margin: 0 auto;
 
 padding: 60px 20px;
 
 
 }
 
-main h2 {
+.titulo {
 font-size: 32px;
+
 margin-bottom: 40px;
+
+
 }
 
-main h2 span {
+.titulo span {
 color: var(--verde);
 }
 
-/* OBJETIVOS */
+/* CONTEÚDOS */
 
-.objetivos {
+.conteudo {
 display: none;
 
-background-color: rgba(58, 55, 94, 0.3);
-
 padding: 40px;
+
+background-color: var(--texto-fundo);
 
 border-radius: 20px;
 
 
 }
 
-.objetivos.ativo {
-display: block;
-}
-
-.objetivos h3 {
-text-align: center;
-
+.conteudo h3 {
 color: var(--verde);
+
+text-align: center;
 
 font-size: 30px;
 
@@ -140,28 +152,48 @@ margin-bottom: 30px;
 
 }
 
-/* LISTA */
+/* MOSTRAR ESTUDOS */
 
-.lista {
+#estudos:checked ~ .conteudo-principal .estudos-conteudo {
+display: block;
+}
+
+/* MOSTRAR PROGRAMAÇÃO */
+
+#programacao:checked ~ .conteudo-principal .programacao-conteudo {
+display: block;
+}
+
+/* MOSTRAR PORTFÓLIO */
+
+#portfolio:checked ~ .conteudo-principal .portfolio-conteudo {
+display: block;
+}
+
+/* MOSTRAR CARREIRA */
+
+#carreira:checked ~ .conteudo-principal .carreira-conteudo {
+display: block;
+}
+
+/* OBJETIVOS */
+
+.objetivos {
+max-width: 900px;
+
+margin: 0 auto;
+
 display: grid;
 
 grid-template-columns: 1fr 1fr;
 
 gap: 20px;
 
-max-width: 900px;
-
-margin: auto;
-
 
 }
 
-/* OBJETIVO */
-
 .objetivo {
-background-color: rgba(58, 55, 94, 0.5);
-
-border-left: 5px solid var(--verde);
+min-height: 100px;
 
 padding: 25px;
 
@@ -171,6 +203,10 @@ align-items: center;
 
 gap: 20px;
 
+background-color: var(--botao-inativo);
+
+border-left: 5px solid var(--verde);
+
 border-radius: 10px;
 
 transition: 0.3s;
@@ -179,17 +215,19 @@ transition: 0.3s;
 }
 
 .objetivo:hover {
-background-color: var(--roxo);
+background-color: var(--botao-ativo);
 
-transform: translateY(-3px);
+transform: translateY(-4px);
 
 
 }
 
-.objetivo strong {
+.objetivo span {
 color: var(--verde);
 
 font-size: 24px;
+
+font-weight: 700;
 
 
 }
@@ -200,7 +238,7 @@ font-size: 18px;
 
 /* CELULAR */
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
 .menu {
     flex-direction: column;
@@ -217,15 +255,19 @@ font-size: 18px;
 }
 
 .botao {
-    width: 100%;
+    text-align: center;
 }
 
-.lista {
+.conteudo-principal {
+    padding: 40px 15px;
+}
+
+.objetivos {
     grid-template-columns: 1fr;
 }
 
-main {
-    padding: 40px 15px;
+.conteudo {
+    padding: 25px 15px;
 }
 
 

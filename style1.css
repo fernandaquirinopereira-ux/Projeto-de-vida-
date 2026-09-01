@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
+
+:root {
+--cor-de-fundo: #1E1E1E;
+--verde: #6FFF57;
+--branco: #FFFFFF;
+--botao-ativo: #3A375E;
+--botao-inativo: rgba(58, 55, 94, 0.5);
+--texto-fundo: rgba(58, 55, 94, 0.3);
+}
+
+{
+box-sizing: border-box;
+}
+
+body {
+background-color: var(--cor-de-fundo);
+color: var(--branco);
+font-family: 'Chakra Petch', sans-serif;
+margin: 0;
+padding: 40px 20px;
+}
+
+.conteudo-principal {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+max-width: 1200px;
+width: 100%;
+margin: 0 auto;
+}
+
+.titulo-principal {
+text-align: left;
+width: 100%;
+font-size: 32px;
+margin-bottom: 30px;
+}
+
+.titulo-principal span {
+color: var(--verde);
+}
+
+.botoes {
+display: block;
+width: 100%;
+}
+
+.botao {
+font-family: 'Chakra Petch', sans-serif;
+background-color: var(--botao-inativo);
+color: var(--branco);
+display: flex;
+justify-content: center;
+padding: 1em;
+font-size: 18px;
+align-items: center;
+width: 100%;
+border-bottom: 4px solid var(--botao-ativo);
+border-left: 2px solid var(--botao-ativo);
+border-right: 2px solid var(--botao-ativo);
+border-top: none;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.botao:hover {
+background-color: var(--botao-ativo);
+}
+
+.botao.ativo {
+background-color: var(--botao-ativo);
+border-bottom: 4px solid var(--verde);
+}
+
+.botao:first-child {
+border-radius: 40px 40px 0 0;
+}
+
+.abas-textos {
+background-color: var(--texto-fundo);
+padding: 40px;
+width: 100%;
+border-radius: 0 0 40px 40px;
+min-height: 300px;
+}
+
+.aba-conteudo.ativo {
+display: block;
+}
+
+.aba-conteudo {
+display: none;
+}
+
+.aba-conteudo-titulo-principal {
+font-size: 28px;
+text-align: center;
+margin-top: 0;
+}
+
+.aba-conteudo-titulo-secundario {
+text-align: center;
+color: var(--verde);
+text-transform: uppercase;
+}
+
+.lista-objetivos {
+list-style: none;
+padding: 0;
+margin: 30px auto 0;
+max-width: 700px;
+}
+
+.lista-objetivos li {
+background-color: var(--botao-inativo);
+border-left: 4px solid var(--verde);
+padding: 18px 20px;
+margin-bottom: 12px;
+border-radius: 8px;
+font-size: 18px;
+transition: 0.3s;
+}
+
+.lista-objetivos li:hover {
+background-color: var(--botao-ativo);
+transform: translateX(5px);
+}
+
+@media screen and (min-width: 768px) {
+
+.botoes {
+    display: flex;
+}
+
+.botao:first-child {
+    border-radius: 40px 0 0 0;
+}
+
+.botao:last-child {
+    border-radius: 0 40px 0 0;
+}
+
+
+}

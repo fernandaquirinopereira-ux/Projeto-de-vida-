@@ -1,68 +1,193 @@
-<<section class="conteudo-principal">
+<<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Meus Objetivos do Ano</title> <link rel="stylesheet" href="style.css"> </head> <body>
+<header class="cabecalho">
+    <nav class="menu-navegacao">
+        <h1 class="logo">Meus Objetivos<span>_</span></h1>
+
+        <div class="menu-botoes">
+            <button class="menu-botao ativo" data-objetivo="cursos">
+                Cursos
+            </button>
+
+            <button class="menu-botao" data-objetivo="javascript">
+                JavaScript
+            </button>
+
+            <button class="menu-botao" data-objetivo="portfolio">
+                Portfólio
+            </button>
+
+            <button class="menu-botao" data-objetivo="carreira">
+                Carreira
+            </button>
+        </div>
+    </nav>
+</header>
+
+
+<main class="conteudo-principal">
 
     <h2 class="titulo-principal">
         Meus Objetivos do ano<span>_</span>
     </h2>
 
-    <div class="botoes">
-        <button class="botao ativo" data-aba="cursos">Cursos</button>
-        <button class="botao" data-aba="javascript">JavaScript</button>
-        <button class="botao" data-aba="portfolio">Portfólio</button>
-        <button class="botao" data-aba="carreira">Carreira</button>
-    </div>
 
-    <div class="abas-textos">
+    <section class="objetivos">
 
-        <div class="aba-conteudo ativo" id="cursos">
-            <h3 class="aba-conteudo-titulo-principal">Cursos</h3>
-            <h4 class="aba-conteudo-titulo-secundario">Meus 4 objetivos</h4>
+        <!-- CURSOS -->
+        <div class="objetivo-conteudo ativo" id="cursos">
 
-            <ul class="lista-objetivos">
-                <li>Concluir cursos de HTML e CSS</li>
-                <li>Aprender JavaScript</li>
-                <li>Estudar Git e GitHub</li>
-                <li>Concluir cursos de programação</li>
-            </ul>
+            <h3 class="objetivo-titulo">
+                Cursos
+            </h3>
+
+            <p class="objetivo-subtitulo">
+                Objetivos para meus estudos
+            </p>
+
+            <div class="lista-objetivos">
+
+                <div class="objetivo">
+                    <span class="numero">01</span>
+                    <p>Concluir cursos de HTML e CSS</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">02</span>
+                    <p>Aprender JavaScript</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">03</span>
+                    <p>Estudar Git e GitHub</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">04</span>
+                    <p>Concluir cursos de programação</p>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="aba-conteudo" id="javascript">
-            <h3 class="aba-conteudo-titulo-principal">JavaScript</h3>
-            <h4 class="aba-conteudo-titulo-secundario">Meus 4 objetivos</h4>
 
-            <ul class="lista-objetivos">
-                <li>Criar projetos com JavaScript</li>
-                <li>Aprender manipulação do DOM</li>
-                <li>Aprender consumo de APIs</li>
-                <li>Criar aplicações interativas</li>
-            </ul>
+        <!-- JAVASCRIPT -->
+        <div class="objetivo-conteudo" id="javascript">
+
+            <h3 class="objetivo-titulo">
+                JavaScript
+            </h3>
+
+            <p class="objetivo-subtitulo">
+                Objetivos para evoluir na programação
+            </p>
+
+            <div class="lista-objetivos">
+
+                <div class="objetivo">
+                    <span class="numero">01</span>
+                    <p>Criar projetos com JavaScript</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">02</span>
+                    <p>Aprender manipulação do DOM</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">03</span>
+                    <p>Aprender a consumir APIs</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">04</span>
+                    <p>Criar aplicações interativas</p>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="aba-conteudo" id="portfolio">
-            <h3 class="aba-conteudo-titulo-principal">Portfólio</h3>
-            <h4 class="aba-conteudo-titulo-secundario">Meus 4 objetivos</h4>
 
-            <ul class="lista-objetivos">
-                <li>Criar meu primeiro portfólio</li>
-                <li>Adicionar meus melhores projetos</li>
-                <li>Melhorar o design do portfólio</li>
-                <li>Publicar o portfólio na internet</li>
-            </ul>
+        <!-- PORTFÓLIO -->
+        <div class="objetivo-conteudo" id="portfolio">
+
+            <h3 class="objetivo-titulo">
+                Portfólio
+            </h3>
+
+            <p class="objetivo-subtitulo">
+                Objetivos para meu portfólio
+            </p>
+
+            <div class="lista-objetivos">
+
+                <div class="objetivo">
+                    <span class="numero">01</span>
+                    <p>Criar meu portfólio</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">02</span>
+                    <p>Adicionar meus melhores projetos</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">03</span>
+                    <p>Melhorar o design do portfólio</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">04</span>
+                    <p>Publicar o portfólio na internet</p>
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="aba-conteudo" id="carreira">
-            <h3 class="aba-conteudo-titulo-principal">Carreira</h3>
-            <h4 class="aba-conteudo-titulo-secundario">Meus 4 objetivos</h4>
 
-            <ul class="lista-objetivos">
-                <li>Atualizar meu currículo</li>
-                <li>Criar um perfil profissional</li>
-                <li>Buscar uma oportunidade na área</li>
-                <li>Participar de processos seletivos</li>
-            </ul>
+        <!-- CARREIRA -->
+        <div class="objetivo-conteudo" id="carreira">
+
+            <h3 class="objetivo-titulo">
+                Carreira
+            </h3>
+
+            <p class="objetivo-subtitulo">
+                Objetivos profissionais
+            </p>
+
+            <div class="lista-objetivos">
+
+                <div class="objetivo">
+                    <span class="numero">01</span>
+                    <p>Atualizar meu currículo</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">02</span>
+                    <p>Criar um perfil profissional</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">03</span>
+                    <p>Buscar uma oportunidade na área</p>
+                </div>
+
+                <div class="objetivo">
+                    <span class="numero">04</span>
+                    <p>Participar de processos seletivos</p>
+                </div>
+
+            </div>
+
         </div>
 
-    </div>
+    </section>
 
-</section>
+</main>
 
 <script src="script.js"></script>
+
+</body> </html>

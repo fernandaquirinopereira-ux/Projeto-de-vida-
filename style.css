@@ -27,14 +27,19 @@ font-family: 'Chakra Petch', sans-serif;
 width: 100%;
 background-color: #151515;
 border-bottom: 2px solid var(--botao-ativo);
+
 position: sticky;
 top: 0;
+
 z-index: 1000;
+
+
 }
 
 .menu-navegacao {
 max-width: 1200px;
 margin: 0 auto;
+
 min-height: 80px;
 
 display: flex;
@@ -55,7 +60,7 @@ white-space: nowrap;
 color: var(--verde);
 }
 
-/* BOTÕES DO MENU */
+/* BOTÕES */
 
 .menu-botoes {
 display: flex;
@@ -73,10 +78,11 @@ border: none;
 padding: 15px 20px;
 
 font-size: 16px;
+font-weight: 400;
 
 cursor: pointer;
 
-transition: 0.3s;
+transition: all 0.3s ease;
 
 
 }
@@ -85,19 +91,25 @@ transition: 0.3s;
 background-color: var(--botao-inativo);
 }
 
+/* BOTÃO ATIVO */
+
 .menu-botao.ativo {
 background-color: var(--botao-ativo);
+
 color: var(--verde);
 
 border-bottom: 3px solid var(--verde);
 
+font-weight: 700;
+
 
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* CONTEÚDO */
 
 .conteudo-principal {
 max-width: 1200px;
+
 width: 100%;
 
 margin: 0 auto;
@@ -109,14 +121,17 @@ padding: 60px 20px;
 
 .titulo-principal {
 font-size: 32px;
+
 margin-bottom: 40px;
+
+
 }
 
 .titulo-principal span {
 color: var(--verde);
 }
 
-/* ÁREA DOS OBJETIVOS */
+/* OBJETIVOS */
 
 .objetivos {
 width: 100%;
@@ -130,15 +145,19 @@ border-radius: 0 0 40px 40px;
 
 }
 
+/* ESCONDER CONTEÚDOS */
+
 .objetivo-conteudo {
 display: none;
 }
+
+/* MOSTRAR CONTEÚDO ATIVO */
 
 .objetivo-conteudo.ativo {
 display: block;
 }
 
-/* TÍTULO */
+/* TÍTULOS */
 
 .objetivo-titulo {
 text-align: center;
@@ -197,7 +216,7 @@ border-left: 4px solid var(--verde);
 
 border-radius: 10px;
 
-transition: 0.3s;
+transition: all 0.3s ease;
 
 
 }

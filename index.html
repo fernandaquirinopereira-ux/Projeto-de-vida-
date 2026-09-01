@@ -1,192 +1,155 @@
-<header class="cabecalho">
+<header>
+    <nav class="menu">
 
-    <nav class="menu-navegacao">
+        <h1>Meus Objetivos<span>_</span></h1>
 
-        <h1 class="logo">
-            Meus Objetivos<span>_</span>
-        </h1>
-
-        <div class="menu-botoes">
-
-            <button class="menu-botao ativo" data-objetivo="estudos">
+        <div class="botoes">
+            <button class="botao ativo" onclick="mostrarObjetivos('estudos', this)">
                 Estudos
             </button>
 
-            <button class="menu-botao" data-objetivo="javascript">
+            <button class="botao" onclick="mostrarObjetivos('javascript', this)">
                 JavaScript
             </button>
 
-            <button class="menu-botao" data-objetivo="portfolio">
+            <button class="botao" onclick="mostrarObjetivos('portfolio', this)">
                 Portfólio
             </button>
 
-            <button class="menu-botao" data-objetivo="carreira">
+            <button class="botao" onclick="mostrarObjetivos('carreira', this)">
                 Carreira
             </button>
-
         </div>
 
     </nav>
-
 </header>
 
 
-<main class="conteudo-principal">
+<main>
 
-    <h2 class="titulo-principal">
-        Meus Objetivos do ano<span>_</span>
-    </h2>
+    <h2>Meus Objetivos do ano<span>_</span></h2>
 
+    <!-- ESTUDOS -->
+    <section id="estudos" class="objetivos ativo">
 
-    <section class="objetivos">
+        <h3>Estudos</h3>
 
-        <!-- ESTUDOS -->
-        <div class="objetivo-conteudo ativo" id="estudos">
+        <div class="lista">
 
-            <h3 class="objetivo-titulo">
-                Estudos
-            </h3>
+            <div class="objetivo">
+                <strong>01</strong>
+                <p>Passar de ano</p>
+            </div>
 
-            <p class="objetivo-subtitulo">
-                Meus objetivos acadêmicos
-            </p>
+            <div class="objetivo">
+                <strong>02</strong>
+                <p>Fazer vestibular</p>
+            </div>
 
-            <div class="lista-objetivos">
+            <div class="objetivo">
+                <strong>03</strong>
+                <p>Fazer faculdade</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Passar de ano</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Fazer vestibular</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Fazer faculdade</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Me formar</p>
-                </div>
-
+            <div class="objetivo">
+                <strong>04</strong>
+                <p>Me formar</p>
             </div>
 
         </div>
 
+    </section>
 
-        <!-- JAVASCRIPT -->
-        <div class="objetivo-conteudo" id="javascript">
 
-            <h3 class="objetivo-titulo">
-                JavaScript
-            </h3>
+    <!-- JAVASCRIPT -->
+    <section id="javascript" class="objetivos">
 
-            <p class="objetivo-subtitulo">
-                Meus objetivos com JavaScript
-            </p>
+        <h3>JavaScript</h3>
 
-            <div class="lista-objetivos">
+        <div class="lista">
 
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Criar projetos com JavaScript</p>
-                </div>
+            <div class="objetivo">
+                <strong>01</strong>
+                <p>Aprender JavaScript</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Aprender manipulação do DOM</p>
-                </div>
+            <div class="objetivo">
+                <strong>02</strong>
+                <p>Criar projetos</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Aprender a consumir APIs</p>
-                </div>
+            <div class="objetivo">
+                <strong>03</strong>
+                <p>Aprender DOM</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Criar aplicações interativas</p>
-                </div>
-
+            <div class="objetivo">
+                <strong>04</strong>
+                <p>Aprender APIs</p>
             </div>
 
         </div>
 
+    </section>
 
-        <!-- PORTFÓLIO -->
-        <div class="objetivo-conteudo" id="portfolio">
 
-            <h3 class="objetivo-titulo">
-                Portfólio
-            </h3>
+    <!-- PORTFÓLIO -->
+    <section id="portfolio" class="objetivos">
 
-            <p class="objetivo-subtitulo">
-                Meus objetivos para o portfólio
-            </p>
+        <h3>Portfólio</h3>
 
-            <div class="lista-objetivos">
+        <div class="lista">
 
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Criar meu portfólio</p>
-                </div>
+            <div class="objetivo">
+                <strong>01</strong>
+                <p>Criar meu portfólio</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Adicionar meus melhores projetos</p>
-                </div>
+            <div class="objetivo">
+                <strong>02</strong>
+                <p>Adicionar meus projetos</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Melhorar o design do portfólio</p>
-                </div>
+            <div class="objetivo">
+                <strong>03</strong>
+                <p>Melhorar o design</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Publicar o portfólio na internet</p>
-                </div>
-
+            <div class="objetivo">
+                <strong>04</strong>
+                <p>Publicar na internet</p>
             </div>
 
         </div>
 
+    </section>
 
-        <!-- CARREIRA -->
-        <div class="objetivo-conteudo" id="carreira">
 
-            <h3 class="objetivo-titulo">
-                Carreira
-            </h3>
+    <!-- CARREIRA -->
+    <section id="carreira" class="objetivos">
 
-            <p class="objetivo-subtitulo">
-                Meus objetivos profissionais
-            </p>
+        <h3>Carreira</h3>
 
-            <div class="lista-objetivos">
+        <div class="lista">
 
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Atualizar meu currículo</p>
-                </div>
+            <div class="objetivo">
+                <strong>01</strong>
+                <p>Atualizar meu currículo</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Criar um perfil profissional</p>
-                </div>
+            <div class="objetivo">
+                <strong>02</strong>
+                <p>Criar perfil profissional</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Buscar uma oportunidade na área</p>
-                </div>
+            <div class="objetivo">
+                <strong>03</strong>
+                <p>Conseguir um emprego</p>
+            </div>
 
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Participar de processos seletivos</p>
-                </div>
-
+            <div class="objetivo">
+                <strong>04</strong>
+                <p>Participar de processos seletivos</p>
             </div>
 
         </div>

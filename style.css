@@ -12,7 +12,7 @@
 {
 margin: 0;
 padding: 0;
-box-sizing border-box
+box-sizing: border-box;
 }
 
 body {
@@ -21,12 +21,9 @@ color: var(--branco);
 font-family: 'Chakra Petch', sans-serif;
 }
 
-/* =========================
-MENU
-========================= */
+/* MENU */
 
 .cabecalho {
-width: 100%;
 background-color: #151515;
 border-bottom: 2px solid var(--botao-ativo);
 }
@@ -53,24 +50,18 @@ font-size: 25px;
 color: var(--verde);
 }
 
-/* =========================
-BOTÕES
-========================= */
+/* BOTÕES */
 
 .botoes {
 display: flex;
 gap: 5px;
 }
 
-/* Esconde os radio buttons */
-
 .botoes input {
 display: none;
 }
 
 .botao {
-display: block;
-
 padding: 15px 20px;
 
 color: var(--branco);
@@ -97,20 +88,13 @@ background-color: var(--botao-inativo);
 #programacao:checked + .botao,
 #portfolio:checked + .botao,
 #carreira:checked + .botao {
-color: var(--verde);
-
 background-color: var(--botao-ativo);
-
+color: var(--verde);
 border-bottom: 4px solid var(--verde);
-
 font-weight: 700;
-
-
 }
 
-/* =========================
-CONTEÚDO PRINCIPAL
-========================= */
+/* CONTEÚDO */
 
 .conteudo-principal {
 max-width: 1200px;
@@ -134,14 +118,10 @@ margin-bottom: 40px;
 color: var(--verde);
 }
 
-/* =========================
-CONTEÚDOS
-========================= */
+/* TODOS OS CONTEÚDOS FICAM ESCONDIDOS */
 
 .conteudo {
 display: none;
-
-width: 100%;
 
 padding: 40px;
 
@@ -152,33 +132,25 @@ border-radius: 20px;
 
 }
 
-/* ESTUDOS */
+/* MOSTRA O CONTEÚDO DO BOTÃO SELECIONADO */
 
 body:has(#estudos:checked) .estudos {
 display: block;
 }
 
-/* PROGRAMAÇÃO */
-
 body:has(#programacao:checked) .programacao {
 display: block;
 }
-
-/* PORTFÓLIO */
 
 body:has(#portfolio:checked) .portfolio {
 display: block;
 }
 
-/* CARREIRA */
-
 body:has(#carreira:checked) .carreira {
 display: block;
 }
 
-/* =========================
-TÍTULO DOS OBJETIVOS
-========================= */
+/* TÍTULO */
 
 .conteudo h3 {
 color: var(--verde);
@@ -192,11 +164,9 @@ margin-bottom: 30px;
 
 }
 
-/* =========================
-OBJETIVOS
-========================= */
+/* OBJETIVOS */
 
-.objetivos {
+.lista-objetivos {
 max-width: 900px;
 
 margin: 0 auto;
@@ -240,10 +210,10 @@ transform: translateY(-4px);
 
 }
 
-.objetivo span {
+.numero {
 color: var(--verde);
 
-font-size: 24px;
+font-size: 25px;
 
 font-weight: 700;
 
@@ -254,9 +224,7 @@ font-weight: 700;
 font-size: 18px;
 }
 
-/* =========================
-CELULAR
-========================= */
+/* CELULAR */
 
 @media screen and (max-width: 768px) {
 
@@ -278,7 +246,7 @@ CELULAR
     text-align: center;
 }
 
-.objetivos {
+.lista-objetivos {
     grid-template-columns: 1fr;
 }
 

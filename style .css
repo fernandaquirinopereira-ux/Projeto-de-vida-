@@ -9,19 +9,11 @@
 --texto-fundo: rgba(58, 55, 94, 0.3);
 }
 
-/* =========================
-RESET
-========================= */
-
 {
 margin: 0;
 padding: 0;
-box-sizing: border-box;
+box-sizing border-box
 }
-
-/* =========================
-BODY
-========================= */
 
 body {
 background-color: var(--cor-de-fundo);
@@ -70,6 +62,8 @@ display: flex;
 gap: 5px;
 }
 
+/* Esconde os radio buttons */
+
 .botoes input {
 display: none;
 }
@@ -97,9 +91,7 @@ transition: 0.3s;
 background-color: var(--botao-inativo);
 }
 
-/* =========================
-BOTÃO ATIVO
-========================= */
+/* BOTÃO ATIVO */
 
 #estudos:checked + .botao,
 #programacao:checked + .botao,
@@ -160,21 +152,25 @@ border-radius: 20px;
 
 }
 
-/* =========================
-MOSTRAR CONTEÚDO
-========================= */
+/* ESTUDOS */
 
 body:has(#estudos:checked) .estudos {
 display: block;
 }
 
+/* PROGRAMAÇÃO */
+
 body:has(#programacao:checked) .programacao {
 display: block;
 }
 
+/* PORTFÓLIO */
+
 body:has(#portfolio:checked) .portfolio {
 display: block;
 }
+
+/* CARREIRA */
 
 body:has(#carreira:checked) .carreira {
 display: block;
@@ -232,10 +228,6 @@ border-left: 5px solid var(--verde);
 border-radius: 10px;
 
 transition: 0.3s;
-
-text-decoration: none;
-
-color: var(--branco);
 
 
 }

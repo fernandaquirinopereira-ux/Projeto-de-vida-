@@ -1,190 +1,92 @@
-<<<header class="cabecalho">
-    <nav class="menu-navegacao">
-        <h1 class="logo">Meus Objetivos<span>_</span></h1>
+/* Container principal do cabeçalho */
+.cabecalho {
+    background-color: #1e293b;
+    border-bottom: 2px solid #334155;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        <div class="menu-botoes">
-            <button class="menu-botao ativo" data-objetivo="passar-de-ano">
-                Passar de ano
-            </button>
+/* Estrutura interna da navegação */
+.menu-navegacao {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
 
-            <button class="menu-botao" data-objetivo="fazer-vestibular">
-                Fazer vestibular
-            </button>
+/* Logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8fafc;
+    letter-spacing: -0.5px;
+}
 
-            <button class="menu-botao" data-objetivo="fazer-faculdade">
-                Fazer faculdade
-            </button>
+.logo span {
+    color: #38bdf8;
+}
 
-            <button class="menu-botao" data-objetivo="me-formar">
-                Me formar
-            </button>
-        </div>
-    </nav>
-</header>
+/* Grupo de botões */
+.menu-botoes {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
 
+/* Estilo individual de cada botão */
+.menu-botao {
+    background-color: transparent;
+    color: #94a3b8;
+    border: 1px solid #334155;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
 
-<main class="conteudo-principal">
+/* Efeito ao passar o mouse */
+.menu-botao:hover {
+    color: #f8fafc;
+    border-color: #38bdf8;
+    background-color: rgba(56, 189, 248, 0.05);
+}
 
-    <h2 class="titulo-principal">
-        Meus Objetivos do ano<span>_</span>
-    </h2>
+/* Estado do botao ativo (aba selecionada) */
+.menu-botao.ativo {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.25);
+}
 
+/* Responsividade para telas menores (Celulares) */
+@media (max-width: 640px) {
+    .menu-navegacao {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
 
-    <section class="objetivos">
+    .logo {
+        text-align: center;
+    }
 
-        <!-- PASSAR DE ANO -->
-        <div class="objetivo-conteudo ativo" id="passar-de-ano">
+    .menu-botoes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
 
-            <h3 class="objetivo-titulo">
-                Passar de ano
-            </h3>
-
-            <p class="objetivo-subtitulo">
-                Objetivos escolares do ano
-            </p>
-
-            <div class="lista-objetivos">
-
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Manter notas acima da média em todas as matérias</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Entregar todas as tarefas e trabalhos no prazo</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Organizar uma rotina diária de estudos</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Tirar dúvidas com professores antes das avaliações</p>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FAZER VESTIBULAR -->
-        <div class="objetivo-conteudo" id="fazer-vestibular">
-
-            <h3 class="objetivo-titulo">
-                Fazer vestibular
-            </h3>
-
-            <p class="objetivo-subtitulo">
-                Objetivos para a preparação do vestibular
-            </p>
-
-            <div class="lista-objetivos">
-
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Escolher os cursos e faculdades pretendidas</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Resolver provas antigas e simulados</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Praticar redação semanalmente</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Acompanhar prazos de inscrição e editais</p>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- FAZER FACULDADE -->
-        <div class="objetivo-conteudo" id="fazer-faculdade">
-
-            <h3 class="objetivo-titulo">
-                Fazer faculdade
-            </h3>
-
-            <p class="objetivo-subtitulo">
-                Objetivos para a jornada acadêmica
-            </p>
-
-            <div class="lista-objetivos">
-
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Garantir a vaga na faculdade desejada</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Aproveitar as disciplinas e projetos de extensão</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Construir redes de contato com colegas e professores</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Conseguir estágios na minha área de estudo</p>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- ME FORMAR -->
-        <div class="objetivo-conteudo" id="me-formar">
-
-            <h3 class="objetivo-titulo">
-                Me formar
-            </h3>
-
-            <p class="objetivo-subtitulo">
-                Objetivos para a conclusão do curso
-            </p>
-
-            <div class="lista-objetivos">
-
-                <div class="objetivo">
-                    <span class="numero">01</span>
-                    <p>Concluir todas as matérias obrigatórias</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">02</span>
-                    <p>Desenvolver e aprovar o Trabalho de Conclusão de Curso (TCC)</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">03</span>
-                    <p>Cumprir a carga horária de estágio e atividades complementares</p>
-                </div>
-
-                <div class="objetivo">
-                    <span class="numero">04</span>
-                    <p>Participar da cerimônia de colação de grau</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-<script src="script.js"></script>
+    .menu-botao {
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+}

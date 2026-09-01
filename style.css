@@ -5,13 +5,13 @@
 --verde: #6FFF57;
 --branco: #FFFFFF;
 --botao-ativo: #3A375E;
---botao-inativo: rgba(50, 42, 134, 0.5);
+--botao-inativo: rgba(58, 55, 94, 0.5);
 --texto-fundo: rgba(58, 55, 94, 0.3);
 }
 
 {
-margin 0
-padding 0
+margin: 0;
+padding: 0;
 box-sizing border-box
 }
 
@@ -21,7 +21,9 @@ color: var(--branco);
 font-family: 'Chakra Petch', sans-serif;
 }
 
-/* MENU */
+/* =========================
+MENU
+========================= */
 
 .cabecalho {
 width: 100%;
@@ -51,7 +53,9 @@ font-size: 25px;
 color: var(--verde);
 }
 
-/* BOTÕES DO MENU */
+/* =========================
+BOTÕES
+========================= */
 
 .botoes {
 display: flex;
@@ -75,6 +79,8 @@ background-color: transparent;
 font-size: 17px;
 
 cursor: pointer;
+
+border-bottom: 4px solid transparent;
 
 transition: 0.3s;
 
@@ -102,7 +108,9 @@ font-weight: 700;
 
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* =========================
+CONTEÚDO PRINCIPAL
+========================= */
 
 .conteudo-principal {
 max-width: 1200px;
@@ -126,10 +134,14 @@ margin-bottom: 40px;
 color: var(--verde);
 }
 
-/* CONTEÚDOS */
+/* =========================
+CONTEÚDOS
+========================= */
 
 .conteudo {
 display: none;
+
+width: 100%;
 
 padding: 40px;
 
@@ -139,6 +151,34 @@ border-radius: 20px;
 
 
 }
+
+/* ESTUDOS */
+
+body:has(#estudos:checked) .estudos {
+display: block;
+}
+
+/* PROGRAMAÇÃO */
+
+body:has(#programacao:checked) .programacao {
+display: block;
+}
+
+/* PORTFÓLIO */
+
+body:has(#portfolio:checked) .portfolio {
+display: block;
+}
+
+/* CARREIRA */
+
+body:has(#carreira:checked) .carreira {
+display: block;
+}
+
+/* =========================
+TÍTULO DOS OBJETIVOS
+========================= */
 
 .conteudo h3 {
 color: var(--verde);
@@ -152,31 +192,9 @@ margin-bottom: 30px;
 
 }
 
-/* MOSTRAR ESTUDOS */
-
-#estudos:checked ~ .conteudo-principal .estudos-conteudo {
-display: block;
-}
-
-/* MOSTRAR PROGRAMAÇÃO */
-
-#programacao:checked ~ .conteudo-principal .programacao-conteudo {
-display: block;
-}
-
-/* MOSTRAR PORTFÓLIO */
-
-#portfolio:checked ~ .conteudo-principal .portfolio-conteudo {
-display: block;
-}
-
-/* MOSTRAR CARREIRA */
-
-#carreira:checked ~ .conteudo-principal .carreira-conteudo {
-display: block;
-}
-
-/* OBJETIVOS */
+/* =========================
+OBJETIVOS
+========================= */
 
 .objetivos {
 max-width: 900px;
@@ -236,7 +254,9 @@ font-weight: 700;
 font-size: 18px;
 }
 
-/* CELULAR */
+/* =========================
+CELULAR
+========================= */
 
 @media screen and (max-width: 768px) {
 
@@ -258,12 +278,12 @@ font-size: 18px;
     text-align: center;
 }
 
-.conteudo-principal {
-    padding: 40px 15px;
-}
-
 .objetivos {
     grid-template-columns: 1fr;
+}
+
+.conteudo-principal {
+    padding: 40px 15px;
 }
 
 .conteudo {
